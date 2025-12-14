@@ -1,14 +1,15 @@
 { lib, ... }:
 {
   imports = [
-    ./catppuccin-theme.nix
-    ./matugen-theme.nix
-    ./medallion-theme.nix
+    ./themes/catppuccin
+    ./themes/matugen
+    ./themes/medallion
+    ./themes/mona-lisa
   ];
   
   options.kitty = with lib; {
     theme = mkOption {
-      type = types.enum [ "none" "catppuccin" "matugen" "medallion" ];
+      type = types.enum [ "none" "catppuccin" "matugen" "medallion" "mona-lisa" ];
       default = "none";
       description = "Choose kitty's theme";
     };

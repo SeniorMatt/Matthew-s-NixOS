@@ -85,9 +85,11 @@
 
         theme = {
           enable = true;
+
+          # Tokyonight
           name = "tokyonight";
           style = "night";
-
+          
           # Catppuccin theme
           # name = "catppuccin";
           # style = "mocha";

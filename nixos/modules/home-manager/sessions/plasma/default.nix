@@ -1,7 +1,7 @@
 { inputs, pkgs, repoPath, ... }: 
 let
   wallpaperFolder = "${repoPath}/pictures/wallpapers";
-  wallpaper = "${wallpaperFolder}/fall-view-from-konsei-pass-japan.jpeg";
+  wallpaper = "${wallpaperFolder}/Straßenszene-bei-Regen,-Berlin-1926.jpg";
   generalFont = "Noto Sans";
   fixedFont = "JetBrainsMono";
   generalFontSize = 12;
@@ -27,6 +27,8 @@ in {
     qt.enable = false;
   };
 
+  kitty.theme = "catppuccin";
+
   defaultApps = {
     imageViewerPackage = pkgs.kdePackages.gwenview;
     imageViewer = "org.kde.gwenview.desktop";
@@ -42,8 +44,8 @@ in {
     kdePackages.kcalc # Calculator app
     kdePackages.kclock # Clock app
     kdePackages.ktorrent # Torrent app
-    splitClock # Split clock widget
     geometryChange # Geometry change kwin effect
+    # splitClock # Split clock widget
   ];
 
   # How to find needed settings
@@ -279,9 +281,15 @@ in {
         height = 44;
         screen = 0;
         floating = false;
-        # opacity = "translucent"; # one of “adaptive”, “opaque”, “translucent” # and it doesn't work
         widgets = [
-          "org.kde.plasma.kickoff" # Default start menu
+          {
+            name = "org.kde.plasma.kickoff"; # Default start menu
+            config = {
+              General = {
+                highlightNewlyInstalledApps = false;
+              };
+            };
+          }
           "org.kde.plasma.pager" # Workspace switcher
           {
             name = "org.kde.plasma.icontasks";
