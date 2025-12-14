@@ -1,1 +1,5 @@
-None
+Some((
+    red: 1.0,
+    green: 0.6784314,
+    blue: 0.0,
+))
