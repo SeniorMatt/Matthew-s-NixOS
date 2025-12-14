@@ -275,10 +275,10 @@ in {
 
     panels = [
       {
-        location = "left";
+        location = "top";
         height = 44;
         screen = 0;
-        floating = true;
+        floating = false;
         # opacity = "translucent"; # one of “adaptive”, “opaque”, “translucent” # and it doesn't work
         widgets = [
           "org.kde.plasma.kickoff" # Default start menu
@@ -300,7 +300,6 @@ in {
               };
             };
           }
-          # "org.kde.plasma.mediacontroller" # media controller
           {
             name = "org.kde.plasma.weather";
             config = {
@@ -344,8 +343,8 @@ in {
               ];
             };
           }
-          "split-clock" # vertical clock
-          # "org.kde.plasma.digitalclock" # clock
+          # "split-clock" # vertical clock
+          "org.kde.plasma.digitalclock" # clock
         ];
       }
     ];
