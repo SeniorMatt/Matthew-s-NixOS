@@ -9,6 +9,7 @@
     ../../modules/home-manager/programs/fastfetch
     ../../modules/home-manager/programs/fun
 
+    ../../modules/home-manager/programs/tmux
     ../../modules/home-manager/programs/kitty
   ];
 
