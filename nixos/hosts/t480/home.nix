@@ -5,10 +5,11 @@
     ../../modules/home-manager/programs/firefox
     ../../modules/home-manager/programs/zen-browser
     ../../modules/home-manager/programs/git
-    ../../modules/home-manager/programs/nvim
+    ../../modules/home-manager/programs/steam
     ../../modules/home-manager/programs/fastfetch
     ../../modules/home-manager/programs/fun
 
+    ../../modules/home-manager/programs/nvim
     ../../modules/home-manager/programs/tmux
     ../../modules/home-manager/programs/kitty
   ];
