@@ -125,6 +125,7 @@ in {
       minecraftia # Minecraft font
       monocraft # Mono Minecraft font
       nerd-fonts.jetbrains-mono # Nerd font
+      fixedsys-excelsior # Fixedsys, Fallout's terminal font
     ];
   };
 
