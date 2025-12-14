@@ -13,10 +13,6 @@ Run this commands inside of your home directory
 git clone https://github.com/SeniorMatt/Matthew-s-NixOS.git 
 ```
 ```
-# Replace `matthew` with the username you chose at the NixOS installation.
-sudo chown -R matthew:users ~/Matthew-s-NixOS/nixos/ 
-```
-```
 cp -f /etc/nixos/hardware-configuration.nix ~/Matthew-s-NixOS/nixos/hosts/t480/
 ```
 

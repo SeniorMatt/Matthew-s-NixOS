@@ -15,6 +15,7 @@ in {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 1;
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
