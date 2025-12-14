@@ -1,4 +1,4 @@
-{ inputs, pkgs, user, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.nvf.homeManagerModules.default ];
 
@@ -29,12 +29,7 @@
         startPlugins = [ null ];
         viAlias = true;
         vimAlias = true;
-        # debugMode = {
-        #   enable = false;
-        #   level = 16;
-        #   logFile = "/tmp/nvim.log";
-        # };
-        # preventJunkFiles = true;
+        preventJunkFiles = true;
         luaConfigPost = ''
           vim.opt.tabstop = 2
           vim.opt.shiftwidth = 2
@@ -46,10 +41,6 @@
           vim.opt.scrolloff = 20;
           vim.opt.colorcolumn = "80"
         '';
-
-        spellcheck = {
-          enable = false;
-        };
 
         lsp = {
           enable = true;
@@ -63,7 +54,6 @@
         languages = {
           enableFormat = false;
           enableTreesitter = true;
-          enableExtraDiagnostics = true;
 
           nix.enable = true;
           markdown.enable = true;
@@ -95,10 +85,12 @@
 
         theme = {
           enable = true;
+          name = "tokyonight";
+          style = "night";
 
           # Catppuccin theme
-          name = "catppuccin";
-          style = "mocha";
+          # name = "catppuccin";
+          # style = "mocha";
 
           # Onedark theme
           # name = "onedark";
@@ -142,13 +134,7 @@
         treesitter = {
           context = {
             enable = true;
-            setupOpts.max_lines = 3;
           };
-        };
-
-        binds = {
-          whichKey.enable = true;
-          cheatsheet.enable = true;
         };
 
         telescope.enable = true;
