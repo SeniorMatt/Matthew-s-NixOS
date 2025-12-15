@@ -308,12 +308,22 @@ in {
               };
             };
           }
+          # Sticky notes
+          # Disabled them, 'cause Plasma Manager will override them with overrideConfig enabled
+          # {
+          #   name = "org.kde.plasma.notes";
+          #   config = {
+          #     General = {
+          #       color = "translucent";
+          #     };
+          #   };
+          # }
+          "org.kde.plasma.marginsseparator" # spacer
           {
             name = "org.kde.plasma.weather";
             config = {
               Appearance = {
                 showTemperatureInCompactMode = true;
-                showTemperatureInBadge = true;
               };
               Units = {
                 pressureUnit = 5029;
@@ -326,17 +336,6 @@ in {
               };
             };
           }
-          # Sticky notes
-          # Disabled them, 'cause Plasma Manager will override them with overrideConfig enabled
-          # {
-          #   name = "org.kde.plasma.notes";
-          #   config = {
-          #     General = {
-          #       color = "translucent";
-          #     };
-          #   };
-          # }
-          "org.kde.plasma.marginsseparator" # spacer
           {
             # systray (net, sound, bt, battery…)
             systemTray.items = {
