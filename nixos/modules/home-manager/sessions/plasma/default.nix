@@ -71,7 +71,6 @@ in {
   # Plasma Manager
   programs.plasma = {
     enable = true;
-    overrideConfig = true;
 
     # Default fonts
     # Small: Noto Sans 8pt
