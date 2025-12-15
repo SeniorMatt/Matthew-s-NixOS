@@ -8,7 +8,6 @@ let
   fixedFontSize = 12;
   smallFontSize = 10;
 
-  splitClock = pkgs.callPackage ./extensions/splitClock {};
   geometryChange = pkgs.callPackage ./extensions/geometryChange {};
 in {
   imports = [
@@ -27,8 +26,6 @@ in {
     qt.enable = false;
   };
 
-  kitty.theme = "catppuccin";
-
   defaultApps = {
     imageViewerPackage = pkgs.kdePackages.gwenview;
     imageViewer = "org.kde.gwenview.desktop";
@@ -45,7 +42,6 @@ in {
     kdePackages.kclock # Clock app
     kdePackages.ktorrent # Torrent app
     geometryChange # Geometry change kwin effect
-    # splitClock # Split clock widget
   ];
 
   # How to find needed settings
@@ -129,7 +125,7 @@ in {
       "services/obsidian.desktop" = {
         "_launch" = "Meta+Shift+O";
       };
-      "kitty.desktop" = {
+      "org.kde.konsole.desktop" = {
         "_launch" = "Meta+Shift+C";
       };
       kwin = {
@@ -303,21 +299,11 @@ in {
                   "applications:discord.desktop"
                   "applications:obsidian.desktop"
                   "applications:org.kde.dolphin.desktop"
-                  "applications:kitty.desktop"
+                  "applications:org.kde.konsole.desktop"
                 ];
               };
             };
           }
-          # Sticky notes
-          # Disabled them, 'cause Plasma Manager will override them with overrideConfig enabled
-          # {
-          #   name = "org.kde.plasma.notes";
-          #   config = {
-          #     General = {
-          #       color = "translucent";
-          #     };
-          #   };
-          # }
           "org.kde.plasma.marginsseparator" # spacer
           {
             name = "org.kde.plasma.weather";
@@ -337,7 +323,6 @@ in {
             };
           }
           {
-            # systray (net, sound, bt, battery…)
             systemTray.items = {
               shown = [
                 "org.kde.plasma.volume"
@@ -350,7 +335,6 @@ in {
               ];
             };
           }
-          # "split-clock" # vertical clock
           "org.kde.plasma.digitalclock" # clock
         ];
       }
@@ -382,8 +366,6 @@ in {
 
     configFile = {
       "kdeglobals"."General" = {
-        TerminalApplication = "kitty";
-        TerminalService = "kitty.desktop";
         accentColorFromWallpaper = true;
       };
       "plasmanotifyrc"."Notifications" = {
