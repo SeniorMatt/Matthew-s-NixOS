@@ -1,4 +1,4 @@
-{ inputs, pkgs, repoPath, ... }: 
+{ inputs, pkgs, repoPath, config, ... }: 
 let
   wallpaperFolder = "${repoPath}/pictures/wallpapers";
   wallpaper = "${wallpaperFolder}/Straßenszene-bei-Regen,-Berlin-1926.jpg";
@@ -43,6 +43,11 @@ in {
     kdePackages.ktorrent # Torrent app
     geometryChange # Geometry change kwin effect
   ];
+
+  # Declaratively syncing Konsole's shortcuts
+  home.file.".local/share/kxmlgui5/konsole/konsoleui.rc" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${repoPath}/.local/share/kxmlgui5/konsole/konsoleui.rc";
+  };
 
   # How to find needed settings
   ## 1. Check out this site to see if there is settings that you needed -
