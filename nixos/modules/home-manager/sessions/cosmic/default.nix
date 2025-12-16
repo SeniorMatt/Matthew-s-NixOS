@@ -7,7 +7,6 @@
   home.packages = with pkgs; [
     eog # Image viewer
     gnome-calendar # Calendar
-    cosmic-ext-tweaks # Tweaking tool for COSMIC
   ];
 
   home.file.".config/cosmic" = {
