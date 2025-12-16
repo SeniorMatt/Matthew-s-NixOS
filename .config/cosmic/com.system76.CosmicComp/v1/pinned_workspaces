@@ -1,17 +1,1 @@
-[
-    (
-        output: (
-            name: "eDP-1",
-            edid: Some((
-                manufacturer: ('L', 'G', 'D'),
-                product: 1313,
-                serial: None,
-                manufacture_week: 0,
-                manufacture_year: 2016,
-                model_year: None,
-            )),
-        ),
-        tiling_enabled: true,
-        id: Some("a49da1"),
-    ),
-]
+[]

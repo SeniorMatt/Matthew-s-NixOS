@@ -40,7 +40,6 @@
     obsidian # Notes
     obs-studio # OBS
     davinci-resolve # DaVinci Resolve
-    kdePackages.kdenlive # Shotcut
     audacity # Audio editor
     prismlauncher # The Minecraft launcher
     kdePackages.kmines # Minesweeper
