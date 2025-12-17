@@ -22,7 +22,7 @@
       size = 13;
     };
     settings = {
-      background_opacity = 0.85;
+      background_opacity = 1;
       background_blur = 1;
       confirm_os_window_close = 0;
       remember_window_size = "no";

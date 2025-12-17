@@ -47,7 +47,7 @@
         modules = [
           ./hosts/t480/configuration.nix
           ./modules/nixos/sessions
-          { session.desktop = "plasma"; }
+          { session.desktop = "niri"; }
         ];
       };
     };
