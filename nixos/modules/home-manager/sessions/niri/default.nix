@@ -137,6 +137,7 @@ in {
       prefer-no-csd = true;
       layout = {
         gaps = 8;
+        always-center-single-column = true;
         default-column-width.proportion = 0.5;
         focus-ring = {
           width = 2;
