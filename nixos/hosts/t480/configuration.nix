@@ -74,7 +74,12 @@ in {
   services.throttled.enable = false;
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.hplipWithPlugin ]; # HP proprietary plugin
+    # Run this to add the printer
+    # NIXPKGS_ALLOW_UNFREE=1 nix-shell -p hplipWithPlugin --run 'sudo -E hp-setup'
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
