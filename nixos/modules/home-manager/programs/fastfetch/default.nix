@@ -3,10 +3,10 @@
     enable = true;
     settings = {
       # logo.source = "~/Matthew-s-NixOS/pictures/avatar-circle.png";
-      logo = {
-        source = "~/Matthew-s-NixOS/pictures/nixos-logo.png";
-        padding.bottom = 8;
-      };
+      # logo = {
+      #   source = "~/Matthew-s-NixOS/pictures/nixos-logo.png";
+      #   padding.bottom = 8;
+      # };
       modules = [
         "break"
         "title"

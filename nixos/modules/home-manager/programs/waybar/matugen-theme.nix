@@ -65,6 +65,7 @@ in
 
       #workspaces button {
           padding: 0 8;
+          margin: 0 2;
           color: @primary;
           background-color: @surface_container_highest;
       }

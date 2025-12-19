@@ -94,11 +94,9 @@ in {
   };
 
   # Install Steam
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-  };
+  programs.steam.enable = true;
 
+  # Gamescope for Steam
   programs.gamescope.enable = true;
 
   # KDE Partition manager

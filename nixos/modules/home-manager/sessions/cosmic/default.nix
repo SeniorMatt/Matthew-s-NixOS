@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     eog # Image viewer
     gnome-calendar # Calendar
+    papirus-icon-theme # Papirus icons
   ];
 
   home.file.".config/cosmic" = {
