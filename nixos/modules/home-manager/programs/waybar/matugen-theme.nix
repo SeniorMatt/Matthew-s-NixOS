@@ -9,7 +9,7 @@ in
       * {
           font-family: JetBrainsMono Nerd Font Propo;
           font-size: 13pt;
-          transition: min-width 250ms ease;
+          transition: min-width 250ms ease, background-color 250ms ease;
           border-radius: ${cornerRadius};
           margin: 0;
           padding: 0;
@@ -27,31 +27,35 @@ in
           background-color: @surface;
       }
 
-      #custom-power,
+      #tray,
       #language,
       #workspaces,
       #custom-distrologo,
+      #battery,
       #window {
           padding: 0 2;
           margin: 0 4;
           color: @primary;
+          min-width: 24px;
       }
 
+      #custom-power,
       #clock,
       #pulseaudio,
-      #battery {
+      #custom-network,
+      #custom-bluetooth {
           color: @primary;
+          background-color: @surface_container;
           padding: 0 2;
-          margin: 0 2;
+          margin: 0 4;
+          min-width: 24px;
       }
 
       #clock:hover,
+      #custom-network:hover,
+      #custom-bluetooth:hover,
+      #custom-power:hover,
       #pulseaudio:hover {
-          background-color: @surface_bright;
-          min-width: 80px;
-      }
-
-      #custom-power:hover {
           background-color: @surface_bright;
           min-width: 48px;
       }
@@ -71,6 +75,7 @@ in
       }
 
       #workspaces button:hover {
+          background-color: @surface_bright;
           min-width: 24px;
       }
 

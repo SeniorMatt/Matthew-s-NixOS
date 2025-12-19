@@ -7,11 +7,11 @@
         {
           layer = "top";
           position = "bottom";
-          spacing = 8;
+          spacing = 0;
 
           modules-left = [ "custom/distrologo" "niri/workspaces" "niri/language" ];
           modules-center = [ "niri/window" ];
-          modules-right = [ "tray" "battery" "battery#bat1" "pulseaudio" "clock" "custom/power" ];
+          modules-right = [ "tray" "battery" "battery#bat1" "clock" "pulseaudio" "custom/network" "custom/bluetooth" "custom/power" ];
 
           "niri/workspaces" = {
             format = "{value}";
@@ -29,7 +29,7 @@
           };
           tray = {
             icon-size = 20;
-            spacing = 2;
+            spacing = 4;
           };
           clock = {
             format = "{:%H:%M}";
@@ -112,15 +112,15 @@
             tooltip-format = "Suspend system";
             on-click = "systemctl suspend";
           };
-          "custom/wifi" = {
+          "custom/network" = {
             format = "";
             tooltip = false;
-            on-click = "nm-connection-editor";
+            on-click = "nmgui";
           };
           "custom/bluetooth" = {
             format = "";
             tooltip = false;
-            on-click = "blueberry";
+            on-click = "blueman-manager";
           };
           "custom/distrologo" = {
             format = "{icon}";

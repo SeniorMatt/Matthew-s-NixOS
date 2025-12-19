@@ -77,6 +77,7 @@ in {
   home.packages = with pkgs; [
     pavucontrol # Audio control
     blueman # Bluetooth control
+    nmgui # Network control
     wlsunset # Blue light filter
     swaybg # Wallpaper tool
     xwayland-satellite # Xwayland support
