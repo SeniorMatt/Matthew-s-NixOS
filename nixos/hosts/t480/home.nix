@@ -2,7 +2,6 @@
 {
   imports = [
     ../../modules/home-manager/shells/bash
-    ../../modules/home-manager/programs/firefox
     ../../modules/home-manager/programs/zen-browser
     ../../modules/home-manager/programs/git
     ../../modules/home-manager/programs/steam
