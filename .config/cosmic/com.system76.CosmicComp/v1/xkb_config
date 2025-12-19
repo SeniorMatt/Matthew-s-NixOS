@@ -4,6 +4,6 @@
     layout: "us,ru",
     variant: ",",
     options: Some("grp:caps_toggle"),
-    repeat_delay: 350,
+    repeat_delay: 250,
     repeat_rate: 25,
 )
