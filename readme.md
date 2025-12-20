@@ -13,6 +13,9 @@ Run this commands inside of your home directory
 git clone https://github.com/SeniorMatt/Matthew-s-NixOS.git 
 ```
 ```
+chmod +x ~/Matthew-s-NixOS
+```
+```
 cp -f /etc/nixos/hardware-configuration.nix ~/Matthew-s-NixOS/nixos/hosts/t480/
 ```
 
