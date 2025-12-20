@@ -52,6 +52,10 @@ in {
         [templates.waybar]
         input_path = '${templateFolder}/colors.css'
         output_path = '~/.config/waybar/colors.css'
+
+        [templates.nvim]
+        input_path = '${templateFolder}/template.lua'
+        output_path = '${templateFolder}/nvim.lua'
       '';
       "gtk-3.0/gtk.css" = {
         text = ''@import 'colors.css';'';
@@ -61,8 +65,6 @@ in {
         text = ''@import 'colors.css';'';
         force = true;
       };
-
-      # You might will need to manually rm -f .config/gtk-4.0/gtk.css
     };
   };
 }
