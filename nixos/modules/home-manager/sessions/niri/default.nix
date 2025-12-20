@@ -1,6 +1,6 @@
 { pkgs, inputs, repoPath, ... }:
 let
-  wallpaper = "${repoPath}/pictures/wallpapers/fall-view-from-konsei-pass-japan.jpeg";
+  wallpaper = "${repoPath}/pictures/wallpapers/feel-gut.png";
   cornerRadius = 6;
 in {
   imports = [
