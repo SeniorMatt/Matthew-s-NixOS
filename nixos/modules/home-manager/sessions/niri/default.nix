@@ -1,10 +1,11 @@
 { pkgs, inputs, repoPath, ... }:
 let
-  wallpaper = "${repoPath}/pictures/wallpapers/feel-gut.png";
+  wallpaper = "${repoPath}/pictures/wallpapers/fall-view-from-konsei-pass-japan.jpeg";
   cornerRadius = 6;
 in {
   imports = [
     inputs.niri-flake.homeModules.niri
+    ./matugen.nix
     ../../theming
 
     ../../programs/default-apps
@@ -143,7 +144,6 @@ in {
         focus-ring = {
           enable = true;
           width = 2;
-          active.color = "#969696";
         };
       };
 

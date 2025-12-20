@@ -23,8 +23,6 @@ in {
     home.activation = {
       run-matugen-once = ''
         ${pkgs.matugen}/bin/matugen image ${wallpaper}
-        # ${pkgs.systemd}/bin/systemctl --user restart hyprpaper.service || true
-        # ${pkgs.systemd}/bin/systemctl --user restart waybar.service || true
       '';
     };
 
@@ -52,6 +50,10 @@ in {
         [templates.waybar]
         input_path = '${templateFolder}/colors.css'
         output_path = '~/.config/waybar/colors.css'
+
+        [templates.niri]
+        input_path = '${templateFolder}/niri.nix'
+        output_path = '${repoPath}/nixos/modules/home-manager/sessions/niri/matugen.nix'
       '';
       "gtk-3.0/gtk.css" = {
         text = ''@import 'colors.css';'';
