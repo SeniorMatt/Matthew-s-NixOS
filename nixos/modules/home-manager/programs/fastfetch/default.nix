@@ -8,16 +8,14 @@
       #   padding.bottom = 8;
       # };
       modules = [
-        "break"
-        "title"
-        "break"
-
         {
           type = "custom";
           format = "123456789012345678901234567890123456789123456789";
           keyColor = "34";
         }
 
+        "break"
+        "title"
         "break"
 
         {
