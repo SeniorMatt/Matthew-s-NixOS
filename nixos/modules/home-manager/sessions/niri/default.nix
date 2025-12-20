@@ -141,6 +141,7 @@ in {
         always-center-single-column = true;
         default-column-width.proportion = 0.5;
         focus-ring = {
+          enable = true;
           width = 2;
           active.color = "#969696";
         };
